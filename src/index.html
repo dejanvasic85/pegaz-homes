@@ -34,6 +34,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+
+    <style>
+      @media (min-width: 992px) {
+        .modal-lg {
+          max-width: 1200px;
+        }
+      }
+
+      .modal {
+        top: 50px;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Area wrapper Starts -->
@@ -49,10 +61,10 @@
                 <a class="nav-link" href="#services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#team">Plans</a>
+                <a class="nav-link" href="#plans">Plans</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Showcase</a>
+                <a class="nav-link" href="#showcase">Showcase</a>
               </li>
             </ul>
           </div>
@@ -80,9 +92,9 @@
               <span class="lni-menu"></span>
               <span class="lni-menu"></span>
             </button>
-            <a href="index.html" class="navbar-brand"
+            <!-- <a href="index.html" class="navbar-brand"
               ><img src="assets/img/logo.png" alt=""
-            /></a>
+            /></a> -->
           </div>
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
@@ -130,7 +142,7 @@
           </div>
           <div class="col-md-12 col-sm-12 col-xs-12">
             <a href="#plans" class="btn btn-common">Plans</a>
-            <a href="#gallery" class="btn btn-border">Gallery</a>
+            <a href="#showcase" class="btn btn-border">Showcase</a>
             <div class="social mt-4">
               <a class="facebook" href="#"
                 ><i class="lni-facebook-filled"></i
@@ -192,7 +204,8 @@
               <p>
                 Our team has vast experience in extending homes. Whether it is a
                 second storey, family room, additional bathrooms or even a
-                basement.
+                basement. We are proud to showcase some of our existing work to
+                give you the confidence for your project.
               </p>
             </div>
           </div>
@@ -310,77 +323,7 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-               
-              </div>
-              <div class="info-text">
-                <h3><a href="#">Jana</a></h3>
-                <p>26 Squares | 12.5 Metres | 4 Bathroom</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-                <img
-                  class="img-fluid"
-                  src="assets/img/homes/Petra.png"
-                  alt=""
-                />
-                <div class="team-overlay">
-                  <div class="overlay-social-icon text-center">
-                    <ul class="social-icons">
-                      <li>
-                        <a href="#"
-                          ><i class="lni-search" aria-hidden="true"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="info-text">
-                <h3><a href="#">Petra</a></h3>
-                <p>26 Squares | 12.5 Metres | 4 Bathroom</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-                <img
-                  class="img-fluid"
-                  src="assets/img/homes/Vanya.png"
-                  alt=""
-                />
-                <div class="team-overlay">
-                  <div class="overlay-social-icon text-center">
-                    <ul class="social-icons">
-                      <li>
-                        <a href="#"
-                          ><i class="lni-search" aria-hidden="true"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="info-text">
-                <h3><a href="#">Vanya</a></h3>
-                <p>26 Squares | 12.5 Metres | 4 Bathroom</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-        </div>
+        <div class="row" id="showcaseContainer"></div>
       </div>
     </section>
     <!-- Contact Section End -->
@@ -427,6 +370,49 @@
     </div>
     <!-- End Preloader -->
 
+    <!-- Modal gallery -->
+    <div
+      id="modalGallery"
+      class="modal fade bd-example-modal-lg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="photoGallery"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner"></div>
+            <a
+              class="carousel-control-prev"
+              href="#galleryCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#galleryCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/jquery-min.js"></script>
     <script src="assets/js/popper.min.js"></script>
@@ -448,5 +434,173 @@
       type="text/javascript"
       src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"
     ></script>
+
+    <script type="text/javascript">
+      const data = {
+        essendon: {
+          label: "Essendon",
+          photos: [
+            "assets/img/essendon/1.jpg",
+            "assets/img/essendon/2.jpg",
+            "assets/img/essendon/3.jpg",
+            "assets/img/essendon/4.jpg",
+            "assets/img/essendon/5.jpg",
+            "assets/img/essendon/6.jpg",
+            "assets/img/essendon/7.jpg",
+            "assets/img/essendon/8.jpg",
+            "assets/img/essendon/9.jpg",
+            "assets/img/essendon/10.jpg",
+            "assets/img/essendon/11.jpg",
+            "assets/img/essendon/12.jpg",
+            "assets/img/essendon/13.jpg",
+            "assets/img/essendon/14.jpg",
+            "assets/img/essendon/15.jpg",
+            "assets/img/essendon/16.jpg",
+            "assets/img/essendon/17.jpg",
+            "assets/img/essendon/18.jpg",
+            "assets/img/essendon/19.jpg",
+          ],
+        },
+
+        mitcham: {
+          label: "Mitcham",
+          photos: [
+            "assets/img/mitcham/image1.png",
+            "assets/img/mitcham/image2.png",
+            "assets/img/mitcham/image3.png",
+            "assets/img/mitcham/image4.png",
+            "assets/img/mitcham/image5.png",
+            "assets/img/mitcham/image6.png",
+            "assets/img/mitcham/image7.png",
+            "assets/img/mitcham/image8.png",
+            "assets/img/mitcham/image9.png",
+            "assets/img/mitcham/image10.png",
+            "assets/img/mitcham/image11.png",
+            "assets/img/mitcham/image12.png",
+          ],
+        },
+
+        mt_waverly: {
+          label: "Mt Waverly",
+          photos: [
+            "assets/img/mt_waverly/main.jpg",
+            "assets/img/mt_waverly/2.jpg",
+            "assets/img/mt_waverly/3.jpg",
+            "assets/img/mt_waverly/4.jpg",
+            "assets/img/mt_waverly/5.jpg",
+            "assets/img/mt_waverly/6.jpg",
+            "assets/img/mt_waverly/7.jpg",
+            "assets/img/mt_waverly/8.jpg",
+            "assets/img/mt_waverly/9.jpg",
+            "assets/img/mt_waverly/10.jpg",
+          ],
+        },
+
+        werribee: {
+          label: "Werribee",
+          photos: [
+            "assets/img/werribee/main.jpg",
+            "assets/img/werribee/image2.jpg",
+            "assets/img/werribee/floorplan1.jpg",
+            "assets/img/werribee/floorplan2.jpg",
+          ],
+        },
+
+        hoppers_crossing: {
+          label: "Hoppers Crossing",
+          photos: [
+            "assets/img/hoppers_crossing/main.jpg",
+            "assets/img/hoppers_crossing/image2.jpg",
+            "assets/img/hoppers_crossing/image3.jpg",
+            "assets/img/hoppers_crossing/image4.jpg",
+            "assets/img/hoppers_crossing/image5.jpg",
+            "assets/img/hoppers_crossing/image6.jpg",
+            "assets/img/hoppers_crossing/image7.jpg",
+            "assets/img/hoppers_crossing/image8.jpg",
+            "assets/img/hoppers_crossing/image9.jpg",
+            "assets/img/hoppers_crossing/image10.jpg",
+            "assets/img/hoppers_crossing/image11.jpg",
+            "assets/img/hoppers_crossing/image12.jpg",
+            "assets/img/hoppers_crossing/image13.jpg",
+          ],
+        },
+
+        woodlea: {
+          label: "Woodlea",
+          photos: [
+            "assets/img/woodlea/image0.jpeg",
+            "assets/img/woodlea/image1.jpeg",
+            "assets/img/woodlea/image2.jpeg",
+            "assets/img/woodlea/image3.jpeg",
+            "assets/img/woodlea/image4.jpeg",
+            "assets/img/woodlea/image5.jpeg",
+            "assets/img/woodlea/image6.jpeg",
+            "assets/img/woodlea/image7.jpeg",
+            "assets/img/woodlea/image8.jpeg",
+            "assets/img/woodlea/image9.jpeg",
+            "assets/img/woodlea/image10.jpeg",
+            "assets/img/woodlea/image11.jpeg",
+          ],
+        },
+      };
+
+      const showcaseHtml = Object.keys(data).reduce((prev, curr) => {
+        const obj = data[curr];
+        const [displayImg] = obj.photos;
+
+        return `
+          ${prev}
+          <div class="col-sm-6 col-md-6 col-lg-4">
+            <div class="team-item text-center">
+              <div class="team-img">
+                <img class="img-fluid" src="${displayImg}" alt="${displayImg}" />
+                <div class="team-overlay">
+                  <div class="overlay-social-icon text-center">
+                    <ul class="social-icons">
+                      <li>
+                        <a data-showcase="${curr}"
+                          ><i class="lni-search" aria-hidden="true"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="info-text">
+                <h3>${obj.label}</h3>
+              </div>
+            </div>
+          </div>`;
+      }, "");
+
+      $("#showcaseContainer").html(showcaseHtml);
+
+      $("[data-showcase]").on("click", function () {
+        const showcaseId = $(this).attr("data-showcase");
+        const showcasePhotos = data[showcaseId].photos;
+
+        const indicatorsHtml = showcasePhotos.reduce((prev, curr, idx) => {
+          return `${prev}<li
+                data-target="#galleryCarousel"
+                data-slide-to="${idx}"
+              ></li>`;
+        }, "");
+
+        const carouselHtml = showcasePhotos.reduce((prev, curr, idx) => {
+          return `${prev}<div class="carousel-item ${idx === 0 && "active"}">
+                <img
+                  class="d-block w-100"
+                  src="${curr}"
+                  alt="Slide ${idx + 1}"
+                />
+              </div>`;
+        }, "");
+
+        $(".carousel-indicators").html(indicatorsHtml);
+        $(".carousel-inner").html(carouselHtml);
+        console.log(carouselHtml);
+        $("#modalGallery").modal();
+      });
+    </script>
   </body>
 </html>
