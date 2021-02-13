@@ -235,8 +235,8 @@
                   <div class="overlay-social-icon text-center">
                     <ul class="social-icons">
                       <li>
-                        <a href="#"
-                          ><i class="lni-search" aria-hidden="true"></i
+                        <a href="assets/img/homes/JanaPlan.pdf" target="_blank"
+                          ><i class="lni-download" aria-hidden="true"></i
                         ></a>
                       </li>
                     </ul>
@@ -244,8 +244,12 @@
                 </div>
               </div>
               <div class="info-text">
-                <h3><a href="#">Jana</a></h3>
-                <p>26 Squares | 12.5 Metres | 4 Bathroom</p>
+                <h3>
+                  <a href="assets/img/homes/JanaPlan.pdf" target="_blank"
+                    >Jana</a
+                  >
+                </h3>
+                <p>25 Squares | 12.5 Metres | 4 Bedroom</p>
               </div>
             </div>
             <!-- Team Item Ends -->
@@ -263,8 +267,8 @@
                   <div class="overlay-social-icon text-center">
                     <ul class="social-icons">
                       <li>
-                        <a href="#"
-                          ><i class="lni-search" aria-hidden="true"></i
+                        <a href="assets/img/homes/PetraPlan.pdf" target="_blank"
+                          ><i class="lni-download" aria-hidden="true"></i
                         ></a>
                       </li>
                     </ul>
@@ -272,8 +276,12 @@
                 </div>
               </div>
               <div class="info-text">
-                <h3><a href="#">Petra</a></h3>
-                <p>26 Squares | 12.5 Metres | 4 Bathroom</p>
+                <h3>
+                  <a href="assets/img/homes/PetraPlan.pdf" target="_blank"
+                    >Petra</a
+                  >
+                </h3>
+                <p>25 Squares | 12.5 Metres | 3 Bedroom</p>
               </div>
             </div>
             <!-- Team Item Ends -->
@@ -291,8 +299,8 @@
                   <div class="overlay-social-icon text-center">
                     <ul class="social-icons">
                       <li>
-                        <a href="#"
-                          ><i class="lni-search" aria-hidden="true"></i
+                        <a href="assets/img/homes/VanyaPlan.pdf" target="_blank"
+                          ><i class="lni-download" aria-hidden="true"></i
                         ></a>
                       </li>
                     </ul>
@@ -300,8 +308,12 @@
                 </div>
               </div>
               <div class="info-text">
-                <h3><a href="#">Vanya</a></h3>
-                <p>26 Squares | 12.5 Metres | 4 Bathroom</p>
+                <h3>
+                  <a href="assets/img/homes/VanyaPlan.pdf" target="_blank"
+                    >Vanya</a
+                  >
+                </h3>
+                <p>20 Squares | 10.5 Metres | 3 Bedroom</p>
               </div>
             </div>
             <!-- Team Item Ends -->
@@ -496,6 +508,24 @@
           ],
         },
 
+        woodlea: {
+          label: "Woodlea",
+          photos: [
+            "assets/img/woodlea/image0.jpeg",
+            "assets/img/woodlea/image1.jpeg",
+            "assets/img/woodlea/image2.jpeg",
+            "assets/img/woodlea/image3.jpeg",
+            "assets/img/woodlea/image4.jpeg",
+            "assets/img/woodlea/image5.jpeg",
+            "assets/img/woodlea/image6.jpeg",
+            "assets/img/woodlea/image7.jpeg",
+            "assets/img/woodlea/image8.jpeg",
+            "assets/img/woodlea/image9.jpeg",
+            "assets/img/woodlea/image10.jpeg",
+            "assets/img/woodlea/image11.jpeg",
+          ],
+        },
+
         werribee: {
           label: "Werribee",
           photos: [
@@ -524,24 +554,6 @@
             "assets/img/hoppers_crossing/image13.jpg",
           ],
         },
-
-        woodlea: {
-          label: "Woodlea",
-          photos: [
-            "assets/img/woodlea/image0.jpeg",
-            "assets/img/woodlea/image1.jpeg",
-            "assets/img/woodlea/image2.jpeg",
-            "assets/img/woodlea/image3.jpeg",
-            "assets/img/woodlea/image4.jpeg",
-            "assets/img/woodlea/image5.jpeg",
-            "assets/img/woodlea/image6.jpeg",
-            "assets/img/woodlea/image7.jpeg",
-            "assets/img/woodlea/image8.jpeg",
-            "assets/img/woodlea/image9.jpeg",
-            "assets/img/woodlea/image10.jpeg",
-            "assets/img/woodlea/image11.jpeg",
-          ],
-        },
       };
 
       const showcaseHtml = Object.keys(data).reduce((prev, curr) => {
@@ -566,7 +578,7 @@
                   </div>
                 </div>
               </div>
-              <div class="info-text">
+              <div class="info-text">  
                 <h3>${obj.label}</h3>
               </div>
             </div>
@@ -598,7 +610,6 @@
 
         $(".carousel-indicators").html(indicatorsHtml);
         $(".carousel-inner").html(carouselHtml);
-        console.log(carouselHtml);
         $("#modalGallery").modal();
       });
     </script>
